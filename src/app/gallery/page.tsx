@@ -5,6 +5,7 @@ import PageHero from '@/components/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Card from '@/components/ui/Card';
 import VideoEmbed from '@/components/ui/VideoEmbed';
+import Image from 'next/image';
 import { galleryItems } from '@/data/gallery';
 import { cn } from '@/lib/utils';
 import { Play, Image as ImageIcon } from 'lucide-react';
@@ -13,6 +14,7 @@ const tabs = [
   { id: 'all', label: 'All Media' },
   { id: 'charity', label: 'Charity & Events' },
   { id: 'water', label: 'Water Projects' },
+  { id: 'boat', label: 'Boats' },
   { id: 'animal-rearing', label: 'Animal Rearing' },
   { id: 'community', label: 'Community Development' },
 ];
@@ -84,9 +86,12 @@ export default function GalleryPage() {
                 ) : (
                   /* Standard Image Card */
                   <div className="relative w-full h-full overflow-hidden">
-                    <div className="w-full h-full flex items-center justify-center">
-                      <ImageIcon className="w-12 h-12 text-primary/20 group-hover:scale-105 transition-transform duration-300" />
-                    </div>
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                     {/* Badge */}
                     <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1 bg-primary/70 rounded-full text-white text-xs font-semibold">
                       <ImageIcon className="w-3.5 h-3.5" />

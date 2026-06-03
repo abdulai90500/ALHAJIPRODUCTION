@@ -3,9 +3,9 @@ import { GalleryItem } from '@/types';
 export const galleryItems: GalleryItem[] = [
   {
     id: '1',
-    src: '/images/gallery/charity-event-1.jpg',
-    alt: 'Ramadan food distribution event',
-    category: 'charity',
+    src: '/images/Boat/boat.jpg',
+    alt: 'Sierra Amerikin Fishing Company Boat',
+    category: 'boat',
     type: 'image',
   },
   {
