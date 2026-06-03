@@ -3,10 +3,10 @@ import { TeamMember, TimelineEvent } from '@/types';
 export const teamMembers: TeamMember[] = [
   {
     id: '1',
-    name: 'Alhaji Mohamed Kamara',
-    role: 'Founder & CEO',
+    name: 'Alhaji Sesay',
+    role: 'Founder & President',
     image: '/images/team/founder.jpg',
-    bio: 'A visionary leader and philanthropist dedicated to transforming communities through sustainable development, clean water initiatives, and agricultural empowerment across West Africa.',
+    bio: 'A Sierra Leonean-born philanthropist based in the United States of America, dedicated to empowering young people and supporting community development through education, skills training, and humanitarian assistance.',
     socials: {
       facebook: '#',
       twitter: '#',
@@ -73,7 +73,7 @@ export const timeline: TimelineEvent[] = [
   {
     year: '2015',
     title: 'Founded with a Vision',
-    description: 'Alhaji Production Home was established with a mission to uplift communities through sustainable development and philanthropy.',
+    description: 'Alhaji Production Home was established by Alhaji Sesay with a mission to uplift communities through sustainable development and philanthropy.',
   },
   {
     year: '2016',

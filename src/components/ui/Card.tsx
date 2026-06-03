@@ -8,7 +8,7 @@ interface CardProps {
   className?: string;
   hover?: boolean;
   glass?: boolean;
-  padding?: 'sm' | 'md' | 'lg';
+  padding?: 'none' | 'sm' | 'md' | 'lg';
 }
 
 export default function Card({
@@ -19,6 +19,7 @@ export default function Card({
   padding = 'md',
 }: CardProps) {
   const paddings = {
+    none: 'p-0',
     sm: 'p-4',
     md: 'p-6',
     lg: 'p-8',

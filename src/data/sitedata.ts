@@ -119,7 +119,7 @@ export const impactStats: StatItem[] = [
 ];
 
 export const contactInfo: ContactInfo = {
-  phone: ['+232 76 123 456', '+232 78 987 654'],
+  phone: ['+1 (703) 832-6858'],
   email: ['info@alhajiproductionhome.com', 'donate@alhajiproductionhome.com'],
   address: 'Freetown, Sierra Leone, West Africa',
   mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.46525817557!2d-13.37221655!3d8.4656765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf04c5e2b569e579%3A0x1e9dcd187e11c1d!2sFreetown%2C%20Sierra%20Leone!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus',
