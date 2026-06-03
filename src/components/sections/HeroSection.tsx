@@ -1,20 +1,59 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Button from '../ui/Button';
 import { ArrowRight, Heart, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+const backgroundImages = [
+  '/images/team/party to chapter one.jpg',
+  '/images/team/restuarant.jpg',
+  '/images/team/ward.jpg',
+  '/images/team/founder.jpg',
+];
+
 export default function HeroSection() {
   const { ref, isVisible } = useScrollAnimation();
+  const [currentBg, setCurrentBg] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % backgroundImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
       ref={ref}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark text-white pt-20 font-heading"
     >
+      {/* Rotating Background Images */}
+      {backgroundImages.map((src, index) => (
+        <div
+          key={src}
+          className={cn(
+            'absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out',
+            currentBg === index ? 'opacity-100' : 'opacity-0'
+          )}
+        >
+          <Image
+            src={src}
+            alt="Alhaji Production Home Background"
+            fill
+            className="object-cover object-top"
+            priority={index === 0}
+          />
+        </div>
+      ))}
+
+      {/* Dark Overlay to make text readable */}
+      <div className="absolute inset-0 bg-dark/80 z-10" />
+
       {/* Background Graphic Patterns */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-light via-dark to-primary-dark/40 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-dark-light/50 via-dark/70 to-primary-dark/60 z-10" />
 
       {/* Blurred background circles for rich visuals */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/20 blur-3xl z-0 animate-float" />
