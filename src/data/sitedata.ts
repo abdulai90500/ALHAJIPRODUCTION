@@ -6,7 +6,7 @@ export const animalCategories: AnimalCategory[] = [
     name: 'Poultry',
     slug: 'poultry',
     description: 'Our poultry farming program is one of our most successful initiatives, producing eggs and meat while creating sustainable employment for community members.',
-    image: '/images/animals/poultry.jpg',
+    image: '/images/animals/animal.jpg',
     details: [
       'Over 2,000 birds including layers and broilers',
       'Daily egg production serving local markets',
@@ -27,7 +27,7 @@ export const animalCategories: AnimalCategory[] = [
     name: 'Cattle',
     slug: 'cattle',
     description: 'Our cattle ranching program focuses on sustainable breeding and dairy production, providing affordable beef and milk to local communities.',
-    image: '/images/animals/cattle.jpg',
+    image: '/images/animals/cow.jpg',
     details: [
       'Herd of 100+ cattle including dairy and beef breeds',
       'Daily milk production for local distribution',
