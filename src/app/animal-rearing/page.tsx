@@ -4,6 +4,7 @@ import { useState } from 'react';
 import PageHero from '@/components/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Card from '@/components/ui/Card';
+import Image from 'next/image';
 import { animalCategories } from '@/data/sitedata';
 import { cn } from '@/lib/utils';
 import { ChevronRight, Egg, Beef, Fish, Sprout } from 'lucide-react';
@@ -88,6 +89,16 @@ export default function AnimalRearingPage() {
                     <p className="text-muted text-base leading-relaxed">
                       {currentCategory.description}
                     </p>
+                  </div>
+
+                  {/* Render the image */}
+                  <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden mb-6">
+                    <Image
+                      src={currentCategory.image}
+                      alt={currentCategory.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
 
                   <div>
